@@ -5,43 +5,55 @@ Each sub-section is based on one file from the shell files and some additional i
 
 This is for making it easy to copy the instructions provided in the shell files.
 
-## Create a directory
+## 1. Create a directory
+
+First, create a directory where your Django project will reside.
 
 ```bash
 mkdir Foldername
 ```
 
-## Change directory
+## 2. Change directory
+
+Navigate into the directory you just created.
 
 ```bash
 cd Foldername
 ```
 
-## Install Virtualenvironemt
+## 3. Install Virtualenvironemt
 
-```bash
-pip install virtualenv
-```
-If you are in a externally managed environment like in Arch Linux then you can try
+Install `virtualenv`, a tool to create isolated Python environments.
 
-```bash
-pacman -S python-virtualenv
-```
-If it fails you can try
+- Using `pip`:
 
-```bash
-pip install virtualenv --break-system-packages
-```
+    ```bash
+    pip install virtualenv
+    ```
+- If you are in a externally managed environment like in Arch Linux then you can try
 
-If it fails again, then you are using Linux, we trust in you.
+    ```bash
+    pacman -S python-virtualenv
+    ```
+- If it fails you can try
 
-## Create virtualenv
+    ```bash
+    pip install virtualenv --break-system-packages
+    ```
+
+- **Note:** If it fails again, then you are using Linux, we trust in you.
+
+## 4. Create virtualenv
+
+Create a virtual environment to isolate your project dependencies.
 
 ```bash
 python -m virtualenv name
 ```
 
-## Activate virtualenv
+## 5. Activate virtualenv
+
+Activate the virtual environment.
 
 ```bash
 name/scripts/activate
@@ -49,25 +61,33 @@ name/scripts/activate
 
 If the script is not there, then look it maybe in `bin` or somewhere, you know what you are doing right?
 
-## Install Django
+## 6. Install Django
+
+Once the virtual environment is activated, install Django.
 
 ```bash
 pip install django
 ```
 
-## Start Django Project
+## 7. Start Django Project
+
+Create a new Django project using `django-admin`.
 
 ```bash
 django-admin startproject (Projectname)
 ```
 
-## Change Directory
+## 8. Change Directory
+
+Navigate into your new project directory.
 
 ```bash
 cd (Projectname)
 ```
 
-## Run Server
+## 9. Run the Django Development Server
+
+Start the development server to ensure everything is set up correctly.
 
 ```bash
 python manage.py runserver
